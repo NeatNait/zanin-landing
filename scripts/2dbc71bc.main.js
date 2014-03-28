@@ -1,0 +1,1 @@
+"use strict";console.log("'Allo 'Allo!"),$(function(){var a=["blue","yellow","green","red"],b=0;setInterval(function(){$(".change-color").removeClass(a[b]);b<a.length-1?b++:b=0;$(".change-color").addClass(a[b])},3e3)});

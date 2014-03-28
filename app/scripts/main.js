@@ -10,9 +10,9 @@ $(function () {
 
 	setInterval(function () {
 
-		$('#iphone5c').removeClass(colors[c]);
+		$('.change-color').removeClass(colors[c]);
 		var x = (c < colors.length-1) ? c++ : c=0;
-		$('#iphone5c').addClass(colors[c]);
+		$('.change-color').addClass(colors[c]);
 
 	}, 3000);
 

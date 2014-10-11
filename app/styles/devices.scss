@@ -11,6 +11,8 @@ $blue : #33a2db;
 	transition: all 1s cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
+
+
 .device .screen {
 	width: 100%;
 	position: relative;
@@ -23,7 +25,35 @@ $blue : #33a2db;
 	border-radius: 1px;
 	-webkit-box-shadow: 0 0 0 3px #111;
 	box-shadow: 0 0 0 3px #111;
+	
 }
+
+
+
+
+.screen img { 
+    left: 0; 
+    position:absolute; 
+    top: 0;
+    width: 100%;
+}
+
+.screen img.novisible {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+ .screen:hover img.novisible {
+ 	opacity:1;
+ 	filter:alpha(opacity=100);
+ }
+ .screen:hover img.visible {
+ 	opacity:0;
+ 	filter:alpha(opacity=0);
+ }
+  .screen img.visible:hover {
+  	opacity:0;
+  	filter:alpha(opacity=0);
+  }  
 
 .device .screen:before {
 	content: '';
@@ -38,10 +68,8 @@ $blue : #33a2db;
 	margin-top: -17px;
 	left: 50%;
 	margin-left: -48px;
-	background-image: url(https://marvelapp.com/static/site_assets/images/logo.png);
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	background-size: 96px 68px;
+
+
 }
 
 #iphone5s .device, #iphone5c .device {
@@ -163,93 +191,6 @@ $blue : #33a2db;
 	border-radius: 2px 2px 0px 0px;
 }
 
-#iphone5s .screen {
-	background: rgb(226,228,228);
-	background: -moz-linear-gradient(top, rgba(226,228,228,1) 0%, rgba(125,130,129,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,228,228,1)), color-stop(100%,rgba(125,130,129,1)));
-	background: -webkit-linear-gradient(top, rgba(226,228,228,1) 0%,rgba(125,130,129,1) 100%);
-	background: -o-linear-gradient(top, rgba(226,228,228,1) 0%,rgba(125,130,129,1) 100%);
-	background: -ms-linear-gradient(top, rgba(226,228,228,1) 0%,rgba(125,130,129,1) 100%);
-	background: linear-gradient(to bottom, rgba(226,228,228,1) 0%,rgba(125,130,129,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e4e4', endColorstr='#7d8281',GradientType=0 );
-}
-
-#iphone5s.gold .screen {
-	background: rgb(241,226,208);
-	background: -moz-linear-gradient(top, rgba(241,226,208,1) 0%, rgba(235,218,199,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(241,226,208,1)), color-stop(100%,rgba(235,218,199,1)));
-	background: -webkit-linear-gradient(top, rgba(241,226,208,1) 0%,rgba(235,218,199,1) 100%);
-	background: -o-linear-gradient(top, rgba(241,226,208,1) 0%,rgba(235,218,199,1) 100%);
-	background: -ms-linear-gradient(top, rgba(241,226,208,1) 0%,rgba(235,218,199,1) 100%);
-	background: linear-gradient(to bottom, rgba(241,226,208,1) 0%,rgba(235,218,199,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e2d0', endColorstr='#ebdac7',GradientType=0 );
-}
-
-#iphone5s.black .screen {
-	background: rgb(179,179,183);
-	background: -moz-linear-gradient(top, rgba(179,179,183,1) 0%, rgba(66,64,68,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(179,179,183,1)), color-stop(100%,rgba(66,64,68,1)));
-	background: -webkit-linear-gradient(top, rgba(179,179,183,1) 0%,rgba(66,64,68,1) 100%);
-	background: -o-linear-gradient(top, rgba(179,179,183,1) 0%,rgba(66,64,68,1) 100%);
-	background: -ms-linear-gradient(top, rgba(179,179,183,1) 0%,rgba(66,64,68,1) 100%);
-	background: linear-gradient(to bottom, rgba(179,179,183,1) 0%,rgba(66,64,68,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b7', endColorstr='#424044',GradientType=0 );
-}
-
-#iphone5c.white .screen {
-	background: rgb(217,217,217);
-	background: -moz-linear-gradient(top, rgba(217,217,217,1) 0%, rgba(161,161,161,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(217,217,217,1)), color-stop(100%,rgba(161,161,161,1)));
-	background: -webkit-linear-gradient(top, rgba(217,217,217,1) 0%,rgba(161,161,161,1) 100%);
-	background: -o-linear-gradient(top, rgba(217,217,217,1) 0%,rgba(161,161,161,1) 100%);
-	background: -ms-linear-gradient(top, rgba(217,217,217,1) 0%,rgba(161,161,161,1) 100%);
-	background: linear-gradient(to bottom, rgba(217,217,217,1) 0%,rgba(161,161,161,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9d9d9', endColorstr='#a1a1a1',GradientType=0 );
-}
-
-#iphone5c.red .screen {
-	background: rgb(255,116,116);
-	background: -moz-linear-gradient(top, rgba(255,116,116,1) 0%, rgba(220,148,223,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,116,116,1)), color-stop(100%,rgba(220,148,223,1)));
-	background: -webkit-linear-gradient(top, rgba(255,116,116,1) 0%,rgba(220,148,223,1) 100%);
-	background: -o-linear-gradient(top, rgba(255,116,116,1) 0%,rgba(220,148,223,1) 100%);
-	background: -ms-linear-gradient(top, rgba(255,116,116,1) 0%,rgba(220,148,223,1) 100%);
-	background: linear-gradient(to bottom, rgba(255,116,116,1) 0%,rgba(220,148,223,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7474', endColorstr='#dc94df',GradientType=0 );
-}
-
-#iphone5c.yellow .screen {
-	background: rgb(255,236,109);
-	background: -moz-linear-gradient(top, rgba(255,236,109,1) 0%, rgba(255,165,70,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,236,109,1)), color-stop(100%,rgba(255,165,70,1)));
-	background: -webkit-linear-gradient(top, rgba(255,236,109,1) 0%,rgba(255,165,70,1) 100%);
-	background: -o-linear-gradient(top, rgba(255,236,109,1) 0%,rgba(255,165,70,1) 100%);
-	background: -ms-linear-gradient(top, rgba(255,236,109,1) 0%,rgba(255,165,70,1) 100%);
-	background: linear-gradient(to bottom, rgba(255,236,109,1) 0%,rgba(255,165,70,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffec6d', endColorstr='#ffa546',GradientType=0 );
-}
-
-#iphone5c.blue .screen {
-	background: rgb(157,206,253);
-	background: -moz-linear-gradient(top, rgba(157,206,253,1) 0%, rgba(102,211,173,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(157,206,253,1)), color-stop(100%,rgba(102,211,173,1)));
-	background: -webkit-linear-gradient(top, rgba(157,206,253,1) 0%,rgba(102,211,173,1) 100%);
-	background: -o-linear-gradient(top, rgba(157,206,253,1) 0%,rgba(102,211,173,1) 100%);
-	background: -ms-linear-gradient(top, rgba(157,206,253,1) 0%,rgba(102,211,173,1) 100%);
-	background: linear-gradient(to bottom, rgba(157,206,253,1) 0%,rgba(102,211,173,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dcefd', endColorstr='#66d3ad',GradientType=0 );
-}
-
-#iphone5c.green .screen {
-	background: rgb(151,213,85);
-	background: -moz-linear-gradient(top, rgba(151,213,85,1) 0%, rgba(211,237,32,1) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(151,213,85,1)), color-stop(100%,rgba(211,237,32,1)));
-	background: -webkit-linear-gradient(top, rgba(151,213,85,1) 0%,rgba(211,237,32,1) 100%);
-	background: -o-linear-gradient(top, rgba(151,213,85,1) 0%,rgba(211,237,32,1) 100%);
-	background: -ms-linear-gradient(top, rgba(151,213,85,1) 0%,rgba(211,237,32,1) 100%);
-	background: linear-gradient(to bottom, rgba(151,213,85,1) 0%,rgba(211,237,32,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97d555', endColorstr='#d3ed20',GradientType=0 );
-}
 
 #iphone5s .camera, #iphone5c .camera {
 	background: #3c3d3d;
